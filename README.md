@@ -1,2 +1,6 @@
-# mtm6302-capstone-basa0044
-This repository is for the Capstone Project for MTM6302
+# Capstone Project
+
+Feyza Basaran
+040924173
+
+Astronomy Picture of the Day Search
