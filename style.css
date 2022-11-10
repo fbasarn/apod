@@ -90,17 +90,65 @@ h1{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* img{
-	width: 100%;
-	flex-grow: 0;
+
+/* ***************************************************** */
+/* ****************** PICTURE SCREEN ******************* */
+/* ***************************************************** */
+
+
+nav{
+	/* background-color:#484848ad;
+	display: block;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around; */
+	display: none;
 }
 
-.background{
+.content{
+	background-color: rgba(0, 0, 0, 0.89);
+}
+
+p{
+	color: white;
+	font-weight: 100;
+	font-family: Arial, Helvetica, sans-serifs;
+	line-height: 24px;
+}
+
+.content > div > h1{
+	text-align: left;
+	font-weight: 100;
+	width: 260px;
+	padding-top: 57px;
+	padding-bottom: 24px;
+	padding-left: 32px;
+}
+
+.content > img{
+	width: 100%;
+}
+
+.content > div > p{
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.content > div > p{
+	padding-left: 32px;
+}
+
+i{
+	color: white;
+
+}
+
+.content-date{
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	z-index: -1;
-} */
+	padding-left: 32px;
+}
 
 
 /* **************************************************** */
@@ -177,6 +225,46 @@ h1{
 	.h1{
 		text-align: left;
 	}
+
+	.content{
+		display: grid;
+		grid-template-columns: 575px 400px;
+		margin-bottom: 46px;
+	}
+
+	nav{
+		display: contents;
+		width: 200px;
+		background-color: #484848cd;
+		display: flex;
+		flex-direction: column;
+	}
+
+	i{
+		color: white;
+	}
+
+	.content > .content-date{
+		grid-column-start: 2;
+		grid-column-end: 3;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	} 
+
+	.content-date > p + i{
+		justify-self: end;
+	} 
+
+	.content .content-date > p{
+		padding-right: 0px;
+		padding-left: 8px;
+	}
+
+	li:first-child{
+
+	}
+
 
 }
 
