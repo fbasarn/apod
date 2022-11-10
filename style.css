@@ -1,0 +1,182 @@
+/*****************************************/
+/*************** CSS RESET ***************/
+/*****************************************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* **************************************************** */
+/* **********************  ROOT *********************** */
+/* **************************************************** */
+
+body{
+	background-color: black;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.container{
+	background-image: url("/images/nasa-background.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+.title{
+	margin: 0 auto;
+	padding-top: 42px;
+	margin-bottom: 24px;
+	width: 280px;
+	background-color: #00000083;
+}
+
+
+h1{
+    color: white;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 46px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* img{
+	width: 100%;
+	flex-grow: 0;
+}
+
+.background{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+} */
+
+
+/* **************************************************** */
+/* ******************** LOGIN FORM ******************** */
+/* **************************************************** */
+
+.form{
+	display: flex;
+	width: max-content;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	padding: 11px 20px ;
+	background-color: #0000008d;
+
+}
+
+.form > label{
+	color: white;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 36px;
+	align-self: flex-start;
+
+}
+
+.form > input{
+	min-width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	border-color: #D5D5D5;
+	border-style: solid;
+	margin-top: 8px;
+}
+
+.form > button{
+	width: 148px;
+	height: 48px;
+	margin-top: 30px;
+}
+
+/* **************************************************** */
+/* ***************** TABLET  **************** */
+/* **************************************************** */
+
+@media screen and (min-width: 720px){
+	.container{
+		background-position-y: 100px;
+		width: 720px;
+		margin: 0 auto;
+	}
+
+	.title{
+		width: 500px;
+	}
+}
+
+/* **************************************************** */
+/* ***************** DESKTOP **************** */
+/* **************************************************** */
+
+@media screen and (min-width: 980px){
+
+	.container{
+		max-width: 1200px;
+	}
+
+	.title{
+		width: 100%;
+		padding-top: 32px;
+		padding-bottom: 57px;
+	}
+
+	.h1{
+		text-align: left;
+	}
+
+}
+
