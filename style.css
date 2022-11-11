@@ -59,7 +59,6 @@ body{
 	background-color: black;
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
-	max-width: 1200px;
 	margin: 0 auto;
 	height: 100%;
 }
@@ -70,6 +69,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
+	max-width: 1200px;
 }
 
 .title{
@@ -97,17 +97,11 @@ h1{
 
 
 nav{
-	/* background-color:#484848ad;
-	display: block;
-	width: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around; */
 	display: none;
 }
 
 .content{
-	background-color: rgba(0, 0, 0, 0.89);
+	background-color: rgba(0, 0, 0, 0.846);
 }
 
 p{
@@ -130,25 +124,37 @@ p{
 	width: 100%;
 }
 
+
 .content > div > p{
 	padding-left: 32px;
 	padding-right: 32px;
 }
 
-.content > div > p{
-	padding-left: 32px;
+.content > .content-date > p{
+	padding-left: 0;
+	padding-right: 0;
 }
 
 i{
 	color: white;
-
 }
 
 .content-date{
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	padding-left: 32px;
+	padding-top: 25px;
+	padding-right: 32px;
+	padding-bottom: 32px;
 }
+
+.content-date > .fa-heart{
+	text-align: left;
+	margin-left: auto;
+	font-size: 30px;
+}
+
 
 
 /* **************************************************** */
@@ -214,6 +220,7 @@ i{
 
 	.container{
 		max-width: 1200px;
+		padding-top: 46px;
 	}
 
 	.title{
@@ -230,14 +237,69 @@ i{
 		display: grid;
 		grid-template-columns: 575px 400px;
 		margin-bottom: 46px;
+		background-color: rgba(0, 0, 0, 0.658);
+
 	}
 
 	nav{
 		display: contents;
+		display: flex;
+		position: relative;
+	}
+
+	nav ul{
+		position: fixed;
 		width: 200px;
+		height: 100%;
 		background-color: #484848cd;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+	}
+
+	nav ul li:first-child{
+		padding-top: 68px;
+	}
+
+	nav ul li:nth-child(2){
+		padding-top: 40px;
+	}
+
+	nav ul li:nth-child(3){
+		padding-top: 385px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav ul li:nth-child(4){
+		padding-top: 35px;
+	}
+
+
+	nav ul li{
+		text-align: center;
+	}
+
+	nav ul li i{
+		font-size: 40px;
+	}
+
+	#date{
+		border-radius: 10px;
+		height: 30px;
+	}
+
+	#date + button{
+		margin: 15px;
+		height: 30px;
+	}
+
+	li > label{
+		color: white;
+	}
+
+	ul li a{
+		display: block;
 	}
 
 	i{
@@ -250,10 +312,7 @@ i{
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-	} 
-
-	.content-date > p + i{
-		justify-self: end;
+		padding-top: 25px;
 	} 
 
 	.content .content-date > p{
@@ -261,10 +320,10 @@ i{
 		padding-left: 8px;
 	}
 
-	li:first-child{
-
+	.content-date > .fa-solid{
+		margin-left: auto;
+		font-size: 30px;
 	}
-
 
 }
 
