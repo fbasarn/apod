@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
 
     <div class="title">
       <h1>Astronomy Picture of the Day Search</h1>
@@ -16,29 +16,24 @@
 
     <main>
 
-      <form method="post">
+      <form method="post" id="form">
         
-          <div class="form">
-            <label for="name"><b>Name</b></label>
-            <input id="name" type="text" placeholder="John Doe" name="uname" required>
-
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="error@mail.com" name="email" required>
-        
-            <label for="password"><b>Password</b></label>
-            <input id="password" type="password" value="1234567" name="psw" required>
-
+          <div class="form">      
             <label for="date"><b>Enter a non-future date</b></label>
-            <input id="date" type="text" placeholder="YYYY-MM-DD" name="date" required>
+            <input id="date" type="date" value="2022-12-08" max="2022-12-08" placeholder="YYYY-MM-DD" name="date" required>
         
             <button type="submit">Enter</button>
           </div>
         </form>
 
+        <div id="contents"></div>
+        <div id="favorites"></div>
+
     </main>
 
   </div>
   <script src="https://kit.fontawesome.com/edf1c6a6ea.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
