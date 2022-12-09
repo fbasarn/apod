@@ -64,12 +64,23 @@ body{
 }
 
 .container{
-	background-image: url("/images/nasa-background.jpeg");
+	/* background-image: url("/images/nasa-background.jpeg"); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	max-width: 1200px;
+}
+
+#background{
+	/* width: 70%; */
+	position: absolute;
+	z-index: -1;
+	/* margin: 0 auto; */
+}
+
+#background-img{
+	width: 100%;
 }
 
 .title{
@@ -99,17 +110,46 @@ h2{
 	margin-bottom: 15px;
 }
 
+.menu > ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu > ul > li:nth-child(1){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.menu > ul > li{
+	padding-top: 20px;
+}
+
+li > p{
+	font-size: 1.2rem;
+}
+
+
+/* #background-img{
+	display: none;
+} */
+
 /* ***************************************************** */
 /* ****************** PICTURE SCREEN ******************* */
 /* ***************************************************** */
 
 
-nav{
+/* nav{
 	display: none;
-}
+} */
 
 .content{
 	background-color: rgba(0, 0, 0, 0.846);
+	/* transform: scale(1); */
+	width: 100%;
 }
 
 p{
@@ -130,6 +170,14 @@ p{
 
 .content > img{
 	width: 100%;
+}
+
+.content-img{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	align-self: center;
 }
 
 
@@ -165,6 +213,7 @@ i{
 
 a{
 	color: white;
+	font-size: 1.2rem;
 }
 
 
@@ -175,32 +224,37 @@ a{
 
 .form{
 	display: flex;
-	width: max-content;
+	/* width: max-content; */
 	flex-direction: column;
 	align-items: center;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	padding: 11px 20px ;
-	padding-top: 80px;
-	background-color: #0000008d;
-	min-height: 500px;
+	/* padding-top: 80px; */
+	/* background-color: #0000008d; */
+	/* min-height: 500px; */
 }
 
 .form > label{
 	color: white;
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 36px;
+	/* margin-top: 36px; */
 	align-self: flex-start;
-
+	font-size: 1.5rem;
 }
 
+/* a{
+	font-size: 1.5rem;
+} */
+
 .form > input{
-	min-width: 300px;
+	/* min-width: 300px; */
 	height: 50px;
 	border-radius: 10px;
 	border-color: #D5D5D5;
 	border-style: solid;
 	margin-top: 8px;
+	width: 300px
 }
 
 .form > button{
@@ -237,13 +291,43 @@ a{
 @media screen and (min-width: 720px){
 	.container{
 		background-position-y: 100px;
-		width: 720px;
+		/* width: 720px; */
+		margin-left: 200px;
 		margin: 0 auto;
 	}
+/* 
+	.form > label{
+		margin-top: 36px;
+	}
+ */
+
+	#background-img{
+		display: block;
+	}
+/* 
+	nav{
+		display: contents;
+		display: flex;
+		position: relative;
+	} */
 
 	.title{
 		width: 500px;
 	}
+
+	#contents{
+		padding-top: 50px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	/* .form > input{
+		width: 300px;
+	} */
+
+
+
+
 }
 
 /* **************************************************** */
@@ -255,12 +339,17 @@ a{
 	.container{
 		max-width: 1200px;
 		padding-top: 46px;
+		padding-left: 200px;
 	}
+
+	/* #background-img{
+		display: contents;
+	} */
 
 	.title{
 		width: 100%;
 		padding-top: 32px;
-		padding-bottom: 57px;
+		/* padding-bottom: 57px; */
 	}
 
 	.h1{
@@ -269,7 +358,8 @@ a{
 
 	.content{
 		display: grid;
-		grid-template-columns: 575px 400px;
+		/* grid-template-columns: 575px 400px; */
+		grid-template-columns: 2fr 1fr;
 		margin-bottom: 46px;
 		background-color: rgba(0, 0, 0, 0.658);
 
@@ -376,6 +466,19 @@ a{
 	h2{
 		text-align: left;
 	}
+
+	.form > input{
+		width: 160px;
+	}
+
+	a{
+		font-size: 1rem;
+	}
+
+	p{
+		font-size: 1rem;
+	}
+
 
 }
 

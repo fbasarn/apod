@@ -3,6 +3,8 @@
  const $favorites = document.getElementById('favorites')
  const $date = document.getElementById('date')
  const $container = document.getElementById('container')
+ const $bimg = document.getElementById('background-img')
+ const $image = document.querySelector('.content-img')
 
 let contents = {}
 
@@ -26,12 +28,8 @@ function showContent(){
         </div>`)
 
         $contents.innerHTML = html.join('')
-        $form.style.height = '300px'
-        $container.style.backgroundImage = 'none'
+        $bimg.style.display = 'none'
     }
-
-
-
 
 
 const date = `${$date.value}`
@@ -45,6 +43,13 @@ $form.addEventListener('submit', async function getContent(date){
 
 
 
+$contents.addEventListener('click', function(e){
+    
+    const html = []
+    if(e.target.classList.contains('content-img')){
+    $contents.innerHTML = `<div class='content' ><img class="content-img" src="${contents.hdurl}" alt="${contents.title}"></div>`
+    }
+})
 
 
 

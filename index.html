@@ -5,17 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy Picture of the Day Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="menu">
+    <ul>
+    <li><i class="fa-solid fa-user"></i><p>Welcome</p></li>
+    <li id="favorites"><i class="fa-solid fa-heart"></i><a href="#">Favorites</a></li>
+    <li>
+      <form method="post" id="form" class="form">
+        <label for="date">Enter a non-future date</label>
+        <input type="date" id="date" name="non-future-date" value="2022-11-10" min="2015-01-01" max="2022-12-08">
+        <button type="submit">ENTER</button>
+      </form>
+    </li>
+    </ul>
+  </nav>
+
+  
+
   <div class="container" id="container">
+    <div id="background"><img id="background-img" src="/images/nasa-background.jpeg"></div>
 
     <div class="title">
       <h1>Astronomy Picture of the Day Search</h1>
     </div>
 
     <main>
-
+<!-- 
       <form method="post" id="form">
         
           <div class="form">      
@@ -24,10 +42,10 @@
         
             <button type="submit">Enter</button>
           </div>
-        </form>
+        </form> -->
 
         <div id="contents"></div>
-        <div id="favorites"></div>
+
 
     </main>
 
