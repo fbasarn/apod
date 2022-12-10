@@ -334,6 +334,22 @@ i{
 	align-self: flex-end;
 }
 
+.fav:hover{
+	color: rgba(255, 255, 255, 0.292);
+
+}
+
+.fav:active{
+	color: rgba(255, 0, 0, 0.503);
+	transform: scale(1.5);
+}
+
+.fa-trash:hover{
+	color: rgba(255, 255, 255, 0.292);
+}
+
+
+
 
 /* **************************************************** */
 /* ***************** TABLET  **************** */
@@ -354,6 +370,9 @@ i{
 
 	#background-img{
 		display: block;
+		/* width: 900px; */
+		object-fit: cover;
+		margin: 0 auto;
 	}
 /* 
 	nav{
@@ -377,8 +396,6 @@ i{
 		padding-right: 34px;
 		padding-bottom: 26px;
 	}
-
-
 
 
 }

@@ -30,7 +30,7 @@ function showContent(contents){
         </div>`)
 
         $contents.innerHTML = html.join('')
-        $bimg.style.display = 'none'
+        $bimg.style.opacity = "0.5"
     }
 
 
@@ -55,9 +55,10 @@ function showFav(){
     const html = []
 
     html.push(`<h2>FAVORITES</h2>`)
-    for(let item of favorites)
-    html.push( /*html*/`
-       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash"></i></div>`)
+       for(let item of favorites)
+       html.push( /*html*/`
+       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash" data-url="${item.url}"></i></div>`)
+
 
     $favs.innerHTML = html.join('')
     $contents.innerHTML = ''
@@ -89,12 +90,17 @@ $favorites.addEventListener('click', function(e){
 $favs.addEventListener('click', function(e){
     e.preventDefault()
     if(e.target.classList.contains('fa-trash')){
-        const url = e.target.dataset.index
+        const url = e.target.dataset.url
+        let index = favorites.findIndex(function findImg(img) {
+            return img.url === url
+        })
         favorites.splice(index, 1)
         localStorage.setItem('fav', JSON.stringify(favorites))
         showFav()
     }
 })
+
+
 
 
 
