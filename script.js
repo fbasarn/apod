@@ -4,6 +4,7 @@
  const $date = document.getElementById('date')
  const $container = document.getElementById('container')
  const $bimg = document.getElementById('background-img')
+ const $cimg = document.querySelector('.background-img')
  const $image = document.querySelector('.content-img')
  const $favs = document.getElementById('favs')
 
@@ -31,12 +32,9 @@ function showContent(contents){
 
         $contents.innerHTML = html.join('')
         $bimg.style.opacity = "0.5"
+        $cimg.style.opacity = "0.5"
     }
 
-
-
-
-const date = `${$date.value}`
 
 $form.addEventListener('submit', async function getContent(date){
     date.preventDefault()
