@@ -8,6 +8,7 @@
  const $image = document.querySelector('.content-img')
  const $favs = document.getElementById('favs')
  const $text = document.getElementById('text')
+ const $homepage = document.getElementById('homepage')
 
 
 
@@ -35,6 +36,7 @@ function showContent(contents){
         </div>`)
 
         $contents.innerHTML = html.join('')
+        $favs.innerHTML = ''
         $bimg.style.opacity = "0.5"
         $cimg.style.opacity = "0.5"
     }
@@ -47,26 +49,25 @@ $form.addEventListener('submit', async function getContent(date){
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=rvEOr6VJE05Ly4t5QqDewZKQMndl3a91eKSjT0Ke&date=' + `${$date.value}`)
         contents = await response.json()
         showContent(contents)
-        $favs.innerHTML = ''
 })
 
 function showFav(){
+    $text.style.display = "none";
+    const html = []
     const fav = localStorage.getItem('fav')
     if(fav){
         favorites = JSON.parse(fav)
-    
-
-    const html = []
-
+    }
     html.push(`<h2>FAVORITES</h2>`)
        for(let item of favorites)
        html.push( /*html*/`
-       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash" data-url="${item.url}"></i></div>`)}
+       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash" data-url="${item.url}"></i></div>`)
 
 
     $favs.innerHTML = html.join('')
     $contents.innerHTML = ''
 }
+
 
 
 
@@ -103,6 +104,10 @@ $favs.addEventListener('click', function(e){
         localStorage.setItem('fav', JSON.stringify(favorites))
         showFav()
     }
+})
+
+$homepage.addEventListener('click', function(e){
+    location.reload()
 })
 
 
