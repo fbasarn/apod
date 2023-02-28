@@ -7,11 +7,15 @@
  const $cimg = document.querySelector('.background-img')
  const $image = document.querySelector('.content-img')
  const $favs = document.getElementById('favs')
+ const $text = document.getElementById('text')
+
+
 
 let contents = {}
 let favorites = []
 
 function showContent(contents){
+    $text.style.display = "none";
     const html = []
 
         html.push( /*html*/`
@@ -36,6 +40,8 @@ function showContent(contents){
     }
 
 
+
+
 $form.addEventListener('submit', async function getContent(date){
     date.preventDefault()
     const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=rvEOr6VJE05Ly4t5QqDewZKQMndl3a91eKSjT0Ke&date=' + `${$date.value}`)
@@ -48,14 +54,14 @@ function showFav(){
     const fav = localStorage.getItem('fav')
     if(fav){
         favorites = JSON.parse(fav)
-    }
+    
 
     const html = []
 
     html.push(`<h2>FAVORITES</h2>`)
        for(let item of favorites)
        html.push( /*html*/`
-       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash" data-url="${item.url}"></i></div>`)
+       <div><img src="${item.url}" alt="${item.alt}"><i class="fa-solid fa-trash" data-url="${item.url}"></i></div>`)}
 
 
     $favs.innerHTML = html.join('')
@@ -72,6 +78,7 @@ $contents.addEventListener('click', function(e){
     }else if(e.target.classList.contains('back')){
         showContent(contents)
     }else if(e.target.classList.contains('fav')){
+        e.target.style.color = '#ff0000'
         favorites.push({
             url: e.target.dataset.url,
             alt: e.target.dataset.alt

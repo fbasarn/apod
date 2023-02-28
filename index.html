@@ -11,12 +11,12 @@
 <body>
   <nav class="menu">
     <ul>
-    <li><i class="fa-solid fa-user"></i><p>Welcome</p></li>
+    <li id="homepage"><i class="fa-solid fa-user"></i><p>Welcome</p></li>
     <li id="favorites"><i class="fa-solid fa-heart"></i><a href="#">Favorites</a></li>
     <li>
       <form method="post" id="form" class="form">
         <label for="date">Enter a non-future date</label>
-        <input type="date" id="date" name="non-future-date" value="2022-12-10" min="2015-01-01" max="2023-01-13">
+        <input type="date" id="date" name="non-future-date" value="2022-12-10" min="2015-01-01">
         <button type="submit">ENTER</button>
       </form>
     </li>
@@ -27,15 +27,15 @@
 
   <div class="container" id="container">
     <div id="background"><img id="background-img" src="images/nasa-background.jpeg" alt="jupiter"></div>
-    <div><img class="background-img" src="images/backgrounnd-720px.jpg" alt="jupiter"></div>
+    <!-- <div><img class="background-img" src="images/backgrounnd-720px.jpg" alt="jupiter"></div> -->
 
     <div class="title">
       <h1>Astronomy Picture of the Day Search</h1>
     </div>
 
     <main>
+        <div id="text"><p>Please enter a non-future date.</p></div>
         <div id="contents"></div>
-
         <div id="favs" class="images container"></div>
 
     </main>

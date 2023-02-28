@@ -80,12 +80,17 @@ body{
 }
 
 
+
 #background-img{
-	display: none;
-}
+		width: 100%;
+		object-fit: contain;
+	}
+
 
 .background-img{
 	width: 100%;
+	height: 100vh;
+	object-fit: contain;
 	position: absolute;
 	z-index: -1;
 }
@@ -145,6 +150,16 @@ li > p{
 ul li a{
 	display: block;
 	text-align: center;
+}
+
+#text{
+	display: flex;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.576);
+}
+
+#text > p{
+	font-size: 1.2rem;
 }
 
 
@@ -347,7 +362,6 @@ i{
 
 .fav:active{
 	color: rgba(255, 0, 0, 0.503);
-	transform: scale(1.5);
 }
 
 .fa-trash:hover{
@@ -375,7 +389,8 @@ i{
  */
 
 	#background-img{
-		display: none;
+		width: 100%;
+		object-fit: contain;
 	}
 /* 
 	nav{
@@ -418,6 +433,9 @@ i{
 	#background-img{
 		display: block;
 		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+		padding-left: 80px;
 	}
 
 	.background-img{
