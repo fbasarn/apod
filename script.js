@@ -147,7 +147,16 @@ $favs.addEventListener('click', function(e){
         localStorage.setItem('fav', JSON.stringify(favorites))
         showFav()
     } else if(e.target.classList.contains('back')){
-        showContent(contents)
+        if(contents.date){
+            showContent(contents)
+        }else{
+           const html = []
+           html.push( /*html*/ `<div id="text"><p>Please enter a non-future date.</p></div>`)
+
+           $contents.innerHTML = html.join('')
+           $favs.innerHTML = ''
+        }
+        
     }
 })
 
