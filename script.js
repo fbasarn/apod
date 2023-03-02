@@ -117,7 +117,7 @@ $contents.addEventListener('click', function(e){
     }else if(e.target.classList.contains('back')){
         showContent(contents)
     }else if(e.target.classList.contains('fav')){
-        e.target.style.color = '#ff0000'
+        e.target.style.color = '#85182A'
         favorites.push({
             url: e.target.dataset.url,
             hdurl: e.target.dataset.hdurl,
