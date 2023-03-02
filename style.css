@@ -392,8 +392,11 @@ i{
 
 .favorites--title{
 	height: max-content;
-	align-items: center;
-	justify-content: center;
+	margin-right: auto;
+}
+
+#favs .favorites--icon{
+	margin-right: auto;
 }
 
 #favs .favorites--icon i{
@@ -407,6 +410,7 @@ i{
 
 #favs .favorites--heading{
 	align-items: center;
+	width: max-content;
 	margin-bottom: 20px;
 }
 

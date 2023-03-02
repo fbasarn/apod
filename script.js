@@ -53,9 +53,6 @@ function showContent(contents){
             <div class="content-date">
                 <div><i class="fa-solid fa-clock"></i>></div>
                 <p>${contents.date}</p>
-                <i class="fav fa-solid fa-heart" data-url="${contents.url}" data-hdurl="${contents.hdurl}" 
-                data-alt="${contents.title}" data-date="${contents.date}" data-explanation="${contents.explanation}"
-                 data-media_type="${contents.media_type}" data-title="${contents.title}"></i>
             </div>
     
         </div>`)}
@@ -168,15 +165,22 @@ $homepage.addEventListener('click', function(e){
     location.reload()
 })
 
+// borrowed/modified code for date value from: https://jsfiddle.net/n4vwaurL/ 
+
+let now = new Date();
+let y = now.getFullYear();
+let m = now.getMonth() + 1;
+let d = now.getDate();
+
+m = m < 10 ? "0" + m : m;
+d = d < 10 ? "0" + d : d;
 
 
+const $today = document.querySelector("input[type=date]")
 
+$today.value = y + "-" + m + "-" + d;
 
+$today.max = y + "-" + m + "-" + d;
 
-
-
-
-
-
-
+// end of borrowed code
 
