@@ -1,5 +1,7 @@
 **Project: Astronomy Picture of the Day Search**
 
+Check out the project live demo from [here](https://fbasarn.github.io/mtm6302-capstone-basa0044/).
+
 This project is built with HTML, CSS, and JavaScript by using NASA's APOD API to show the Astronomy picture/video and explanation of the selected non-future date.
 
 Here is the [XD Design](https://xd.adobe.com/view/290b7241-66ec-47cb-adcd-2282332cb50c-7c58/) file.
