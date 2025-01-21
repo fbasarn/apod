@@ -15,5 +15,6 @@ Here is the [XD Design](https://xd.adobe.com/view/290b7241-66ec-47cb-adcd-228233
 - Users can delete their favourite images by clicking on the trash icon. Clicking on the image will make the explanation and title appear again.
 - Users can go to their search back by clicking on the back arrow on the favourites screen.
 
+**Credits**
 
-
+- This project is built only by me without any external contribution. All rights reserved by Feyza Basaran.
